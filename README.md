@@ -80,8 +80,8 @@ Vous travaillez sur une application web d'une calculatrice. Imaginons qu'on vous
 
 Les étapes suivantes vous aideront à réaliser l'activité :
 
-1.Créez une fonction qui calculera et retournera le factoriel du nombre d'entrée.
-2.Créez une fonction qui retournera la somme des nombres d'entrée (un nombre variable de paramètres).
-3.Créez une fonction qui évaluera $number entré, qui doit être un nombre entier et qui retournera si le nombre est un nombre premier ou non. Le type de retour de cette fonction est un booléen (bool).
-4.Créer une fonction performOperation de base qui traitera les opérations mathématiques prédéfinies. Le premier paramètre de la fonction performOperation doit être une chaîne de caractères, soit "factorielle", soit "somme", soit "nombre premier". Les arguments restants sont transmis à la fonction mathématique appelée en tant qu'arguments.
+1. Créez une fonction qui calculera et retournera le factoriel du nombre d'entrée.
+2. Créez une fonction qui retournera la somme des nombres d'entrée (un nombre variable de paramètres).
+3. Créez une fonction qui évaluera $number entré, qui doit être un nombre entier et qui retournera si le nombre est un nombre premier ou non. Le type de retour de cette fonction est un booléen (bool).
+4. Créer une fonction performOperation de base qui traitera les opérations mathématiques prédéfinies. Le premier paramètre de la fonction performOperation doit être une chaîne de caractères, soit "factorielle", soit "somme", soit "nombre premier". Les arguments restants sont transmis à la fonction mathématique appelée en tant qu'arguments.
 
