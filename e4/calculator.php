@@ -25,9 +25,20 @@ function addition(...$nbrs) {
 $result = addition(2,3,4,20);
 echo $result;
 */
+/*
+function addition(...$nbrs) { 
 
+    foreach($nbrs as $i){
 
-
+        echo 'bonjour '  .$i;
+        echo'<br>';
+    };
+}    
+  
+  
+  $result = addition('sana','youssra');
+  echo $result;
+*/
 
 
 ?>
