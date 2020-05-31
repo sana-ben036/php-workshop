@@ -10,18 +10,18 @@ $realisateurs = [
 ];
 
 
-$nbrR = array_rand($realisateurs, 1); //pour determiner le nombre des realisateurs à afficher (note :array_rand() expects parameter 1 to be array)
-$nbrT = array_rand($nbrR, 5);        // pour determiner le nombre de titre à afficher (note: Second argument has to be between 1 and the number of elements in the array)
+$nbrR = array_rand($realisateurs, 3); //pour determiner le nombre des realisateurs à afficher (note :array_rand() expects parameter 1 to be array)
+$nbrT = array_rand($nbrR, 2);        // pour determiner le nombre de titre à afficher (note: Second argument has to be between 1 and the number of elements in the array)
 
     foreach($nbrR as $cle => $i){
-    echo 'les films de '  .$i. ':<br>';
+    echo "<b>les films de $i :</b> <br><br>";
 
     foreach ($nbrT as $y){
         echo $realisateurs[$i][$y] .'<br>';
+
     }
+
     echo '<br>';
-
-
     }
 
 
