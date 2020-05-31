@@ -1,6 +1,7 @@
 <?php
 
 /*
+<?php
 $name = "SANA" ;
 $weightKg = 48;
 $heightCm = 158 ;
@@ -10,6 +11,8 @@ $heightM2 = $heightM * $heightM;
 $IMC = $weightKg / $heightM2;
 
 echo "Bonjour $name , votre IMC est $IMC";
+
+?>
 
 */
 

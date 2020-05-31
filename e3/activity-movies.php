@@ -1,60 +1,28 @@
 <?php
 
-
-$r1 = ['Titre1','Titre2','Titre3','Titre4','Titre5'];
-$r2 = ['Titre1','Titre2','Titre3','Titre4','Titre5'];
-$r3 = ['Titre1','Titre2','Titre3','Titre4','Titre5'];
-$r4 = ['Titre1','Titre2','Titre3','Titre4','Titre5'];
-$r5 = ['Titre1','Titre2','Titre3','Titre4','Titre5'];
-$r = array ($r1,$r2,$r3,$r4,$r5);
-
 $realisateurs = [
-'realisateur1'=> ['Titre1','Titre2','Titre3','Titre4','Titre5'],
-'realisateur2'=> ['Titre1','Titre2','Titre3','Titre4','Titre5'],
-'realisateur3'=> ['Titre1','Titre2','Titre3','Titre4','Titre5'],
-'realisateur4'=> ['Titre1','Titre2','Titre3','Titre4','Titre5'],
-'realisateur5'=> ['Titre1','Titre2','Titre3','Titre4','Titre5']
+'realisateur1'=> ['Titre11','Titre12','Titre13','Titre14','Titre15'],
+'realisateur2'=> ['Titre21','Titre22','Titre23','Titre24','Titre25'],
+'realisateur3'=> ['Titre31','Titre32','Titre33','Titre34','Titre35'],
+'realisateur4'=> ['Titre41','Titre42','Titre43','Titre44','Titre45'],
+'realisateur5'=> ['Titre51','Titre52','Titre53','Titre54','Titre55']
 
 ];
 
-function ShowDetails($nbrR,$nbrT){
 
+$nbrR = array_rand($realisateurs, 1); //pour determiner le nombre des realisateurs à afficher (note :array_rand() expects parameter 1 to be array)
+$nbrT = array_rand($nbrR, 5);        // pour determiner le nombre de titre à afficher (note: Second argument has to be between 1 and the number of elements in the array)
 
+    foreach($nbrR as $cle => $i){
+    echo 'les films de '  .$i. ':<br>';
 
-
-
-}
-
-
-foreach($realisateurs as $cle => $realisateur){
-    echo 'les films de ' .$cle. ':<br>';
-
-    foreach ($realisateur as $titre){
-        echo $titre .'<br>';
+    foreach ($nbrT as $y){
+        echo $realisateurs[$i][$y] .'<br>';
     }
     echo '<br>';
 
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 
 
