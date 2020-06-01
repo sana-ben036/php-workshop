@@ -40,7 +40,7 @@ function addition(...$nbrs) {
   echo $result;
 */
 
-
+/*
 
 function Nombre_Premier(int $number){
 
@@ -66,6 +66,27 @@ if($result){
 
 
 
+
+
+function Calcul($operation,$a,$b){
+
+    
+  $operation($a,$b);
+
+
+
+}
+$result= 'Calcul';
+echo $result('addition',2,3);
+*/
+
+$opr = 'add';
+$a=2;
+$b=3;
+
+$result = $a + $b;
+
+echo $result;
 
 
 
