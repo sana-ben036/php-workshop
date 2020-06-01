@@ -11,7 +11,7 @@ $realisateurs = [
 
 function showDetails (int $r=5, int $t=5){
 
-    global $realisateurs;                  // permettre de connaitre un variable declaré hors de la fonction
+    global $realisateurs;                  // pour rendre un variable qui est declaré hors la fonction, accessible ( Portée globale)
 
     $nbrR = array_rand($realisateurs, $r); //pour determiner le nombre des realisateurs à afficher (note :array_rand() expects parameter 1 to be array)
     $nbrT = array_rand($nbrR, $t);        // pour determiner le nombre de titre à afficher (note: Second argument has to be between 1 and the number of elements in the array)
