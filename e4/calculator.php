@@ -41,6 +41,35 @@ function addition(...$nbrs) {
 */
 
 
+
+function Nombre_Premier(int $number){
+
+    if ($number < 2){
+        return false;
+    }elseif($number >= 2 && $number % 2 == 0){
+        return false;
+    }else{
+        return true;
+        
+    }
+
+
+
+}
+$result = Nombre_Premier(21);
+if($result){
+    echo 'ce nombre est un nombre premier';
+
+}else {
+    echo 'ce nombre n\'est pas un nombre premier';
+}
+
+
+
+
+
+
+
 ?>
 
 
