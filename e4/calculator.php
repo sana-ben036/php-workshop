@@ -18,13 +18,13 @@ echo $result .'<br>';
 
 /*::: fonction pour addition:::::::::::::::::::::::::::::::::::::::::::::::::*/
 
-function addition(...$nbrs) { 
+function addition(int...$nbrs) { 
 
   echo  array_sum($nbrs);
     
 }  
 
-$result = addition(2,3,4,20);
+$result = addition(2,'6',4,20);
 echo $result .'<br>';
 
 
@@ -65,13 +65,15 @@ if($result){
     echo 'ce nombre est un nombre premier' .'<br>';
 
 }else {
-    echo 'ce nombre n\'est pas un nombre premier' .'<br>';;
+    echo 'ce nombre n\'est pas un nombre premier' .'<br>';
 }
 
 
 /*::::::::::::::: fonction callable::::::::::::::::::::::::::::::::::::::::*/
 
-echo call_user_func('factorielle', 4);
+echo call_user_func('addition', 1, 2) .'<br>';;
+echo call_user_func('factorielle', 5) .'<br>';;
+echo call_user_func('addition_String','Ahmed','Kamal');
 
 
 
