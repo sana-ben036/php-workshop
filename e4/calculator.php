@@ -1,7 +1,7 @@
 <?php
 
-/*
-:::: calculer le factorielle:::::::::::::::::::::::::::::::::::::::::::
+
+/*:::: calculer le factorielle:::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 function factorielle($nbr) { 
     if($nbr === 0) // condition d'arret 
@@ -10,11 +10,13 @@ function factorielle($nbr) {
     return $nbr*factorielle($nbr-1); 
 }  
 $result = factorielle(3);
-echo $result;
+echo $result .'<br>';
 
-*/
-/* 
-::: fonction pour addition:::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+/*::: fonction pour addition:::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 function addition(...$nbrs) { 
 
@@ -23,24 +25,29 @@ function addition(...$nbrs) {
 }  
 
 $result = addition(2,3,4,20);
-echo $result;
-*/
-/*
-function addition(...$nbrs) { 
+echo $result .'<br>';
 
-    foreach($nbrs as $i){
 
-        echo 'bonjour '  .$i;
+
+
+
+function addition_String(...$prenoms) { 
+
+    foreach($prenoms as $p){
+
+        echo 'bonjour '  .$p;
         echo'<br>';
     };
 }    
-  
-  
-  $result = addition('sana','youssra');
-  echo $result;
-*/
 
-/*
+$result = addition_String('sana','youssra');
+echo $result .'<br>';
+
+
+
+
+/*::: fonction verifier si le nombre est premier:::::::::::::::::::::::::::::::::::::::::::::::::*/
+
 
 function Nombre_Premier(int $number){
 
@@ -52,42 +59,19 @@ function Nombre_Premier(int $number){
         return true;
         
     }
-
-
-
 }
 $result = Nombre_Premier(21);
 if($result){
-    echo 'ce nombre est un nombre premier';
+    echo 'ce nombre est un nombre premier' .'<br>';
 
 }else {
-    echo 'ce nombre n\'est pas un nombre premier';
+    echo 'ce nombre n\'est pas un nombre premier' .'<br>';;
 }
 
 
+/*::::::::::::::: fonction callable::::::::::::::::::::::::::::::::::::::::*/
 
-
-
-function Calcul($operation,$a,$b){
-
-    
-  $operation($a,$b);
-
-
-
-}
-$result= 'Calcul';
-echo $result('addition',2,3);
-*/
-
-$opr = 'add';
-$a=2;
-$b=3;
-
-$result = $a + $b;
-
-echo $result;
-
+echo call_user_func('factorielle', 4);
 
 
 
