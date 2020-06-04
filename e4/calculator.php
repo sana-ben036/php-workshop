@@ -1,10 +1,10 @@
 <?php
 
 
-/*:::: calculer le factorielle:::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*:::: calculer le factorielle (La récursivité) :::::::::::::::::::::::::::::::::::::::::::::::::*/
 
-function factorielle($nbr) { 
-    if($nbr === 0) // condition d'arret 
+function factorielle($nbr) {              
+    if($nbr == 1 ) // condition d'arret 
     return 1;  
     else 
     return $nbr*factorielle($nbr-1); 
@@ -14,71 +14,62 @@ echo $result .'<br>';
 
 
 
+/*::::: fonction pour addition::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
+function addition(...$nbrs) {   // si on veut calculer la somme des valeurs (des arguments)
 
-/*::: fonction pour addition:::::::::::::::::::::::::::::::::::::::::::::::::*/
-
-function addition(int...$nbrs) { 
-
-  echo  array_sum($nbrs);
+    return  array_sum($nbrs);
     
 }  
 
-$result = addition(2,'6',4,20);
+$result= addition(2,4,20);
 echo $result .'<br>';
 
 
+function somme_argument(){    // si on veut calculer juste le nombre des entrees (nombre des arguments passés par la fonction)
+    return func_num_args();
 
 
-
-function addition_String(...$prenoms) { 
-
-    foreach($prenoms as $p){
-
-        echo 'bonjour '  .$p;
-        echo'<br>';
-    };
-}    
-
-$result = addition_String('sana','youssra');
-echo $result .'<br>';
-
+}
+$result = somme_argument(1,6,9,'sana');
+echo 'nombre des arguments est :' .$result. '<br/';
 
 
 
 /*::: fonction verifier si le nombre est premier:::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 
-function Nombre_Premier(int $number){
-
-    if ($number < 2){
-        return false;
-    }elseif($number >= 2 && $number % 2 == 0){
-        return false;
-    }else{
-        return true;
-        
-    }
+function nombre_premier($x){
+    for ($i=2; $i < $x ; $i++) { 
+        if($x % $i==0){
+        $test =1;
+        }
+    }if (isset($test)) {
+        echo "$x n'est pas un nomber premier";
+    } else {
+        echo "$x est un nomber premier";
+    } 
 }
-$result = Nombre_Premier(21);
-if($result){
-    echo 'ce nombre est un nombre premier' .'<br>';
+nombre_premier(15);
 
-}else {
-    echo 'ce nombre n\'est pas un nombre premier' .'<br>';
-}
+
 
 
 /*::::::::::::::: fonction callable::::::::::::::::::::::::::::::::::::::::*/
 
-echo call_user_func('addition', 1, 2) .'<br>';;
-echo call_user_func('factorielle', 5) .'<br>';;
-echo call_user_func('addition_String','Ahmed','Kamal');
+echo call_user_func('addition', 1, 2) .'<br>';
+echo call_user_func('factorielle', 5) .'<br>';
+echo call_user_func('somme_argument','Ahmed','Kamal');
+echo call_user_func('nombre_premier', 5) .'<br>';
 
 
 
 ?>
 
+
+
+
+?>
 
 
 
