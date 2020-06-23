@@ -1,3 +1,9 @@
+<?php
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +12,7 @@
     <title>Document</title>
 </head>
 <body>
+
 <pre>
 <h1>Espace des etudiants</h1>
 
@@ -35,20 +42,29 @@ echo $e5->afficherE();
 <?php
 
 $p1 = new Professeur ('youssef');
-$p1 -> addEtudiant($e1);
-echo print_r($p1,true).'</pre>';
-$p1 -> addEtudiant($e2);
-echo print_r($p1,true).'</pre>';
-echo $p1->imprimer();
+    $p1 -> addEtudiant($e1);
+    $p1 -> addEtudiant($e2);
+    $p1 -> addEtudiant($e3);
+    echo $p1->imprimer();
+    
+$p2 = new Professeur ('hanan');
+    $p2 -> addEtudiant($e4);
+    $p2 -> addEtudiant($e5);
+    echo $p2->imprimer();
+
+Professeur::changerTitre();
+    echo $p1->imprimer();
+    echo $p2->imprimer();
+    
+
+
+    
 
 
 
 
 ?>
 
-
-
-
-
+    
 </body>
 </html>

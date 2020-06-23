@@ -1,32 +1,45 @@
 <?php
 
 
-class Professeur{
-    private $_nom;
-    private $_titre = 'Prof';
-    private $_etudiants;
+    class Professeur{
+
+        private static $titre;
+        private $nom;
+        private $etudiants;
+    
+        public function __construct($n){
+            self :: $titre = 'Prof';
+            $this-> nom = $n;
+            $this-> etudiants = array() ;
+    
+        }
+    
+        public function addEtudiant(Etudiant $e){
+            $this -> etudiants[$e-> getNom()] = $e;
+            
+    
+        }
+    
+        public function imprimer (){
+            echo self:: $titre  .' ' .   $this->nom .'<br/>';
+            echo  print_r ($this->etudiants) .'<br/>';
+    
+        }
+
+        public static function changerTitre(){
+                self :: $titre = 'Dr';
+        }
 
 
-    public function __construct($n){
-        $this->_nom = $n;
-        $this->_etudiants = array();
-
-    }
-
-    public function addEtudiant(Etudiant $e){
-        $this ->_etudiants[$e-> getNom()] = $e;
         
 
+
     }
 
-    public function imprimer (){
-        echo $this->_titre  .' ' .   $this->_nom .'<br/>';
-        echo $this->_etudiants .'<br/>';
-        foreach($_etudiants as $cle=>$i ){
-            
-        }
-    }
-}
+
+
+
+
 
 
 ?>

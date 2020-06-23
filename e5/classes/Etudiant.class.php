@@ -1,18 +1,19 @@
 <?php
 
 class Etudiant{
-    private $_nom;
-    private $_titre = 'Student';
+    private static $titre;
+    private $nom;
     public function __construct($n){
-        $this->_nom = $n;
+        self :: $titre = 'Student';
+        $this->nom = $n;
     }
     // methode getter to get name of student
     public function getNom() {
-        return $this->_nom;
+        return $this->nom;
     }
     // methode to show instance
     public function afficherE(){
-        echo  $this->_titre .' ' .$this->_nom . '<br/>';
+        echo  self :: $titre  .' ' .$this->nom . '<br/>';
 
 
     }
